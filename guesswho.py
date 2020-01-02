@@ -164,257 +164,13 @@ Susan.grid(row=M23.row, column=M23.column)
 Tom.grid(row=M24.row, column=M24.column)
 
 
-def guess(name):
-    global Aleximage
-    global Alfredimage
-    global Anitaimage
-    global Anneimage
-    global Bernardimage
-    global Billimage
-    global Charlesimage
-    global Claireimage
-    global Davidimage
-    global Ericimage
-    global Fransimage
-    global Georgeimage
-    global Hermanimage
-    global Joeimage
-    global Mariaimage
-    global Maximage
-    global Paulimage
-    global Peterimage
-    global Philipimage
-    global Richardimage
-    global Robertimage
-    global Samimage
-    global Susanimage
-    global Tomimage
-    global Alex
-    global Alfred
-    global Anita
-    global Anne
-    global Bernard
-    global Bill
-    global Charles
-    global Claire
-    global David
-    global Eric
-    global Frans
-    global George
-    global Herman
-    global Joe
-    global Maria
-    global Max
-    global Paul
-    global Peter
-    global Philip
-    global Richard
-    global Robert
-    global Sam
-    global Susan
-    global Tom
-
-    guess = "none"
-    if name == Aleximage:
-        guess = "Alex"
-        Aleximage = AleximageX
-        Alex.destroy()
-        Alex = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Aleximage,
-                      command=lambda: click(Aleximage), state=DISABLED)
-    if name == Alfredimage:
-        guess = "Alfred"
-        Alfredimage = AlfredimageX
-        Alfred.destroy()
-        Alfred = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Alfredimage,
-                        command=lambda: click(Alfredimage), state=DISABLED)
-    if name == Anitaimage:
-        guess = "Anita"
-        Anitaimage = AnitaimageX
-        Anita.destroy()
-        Anita = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Anitaimage,
-                       command=lambda: click(Anitaimage), state=DISABLED)
-    if name == Anneimage:
-        guess = "Anne"
-        Anneimage = AnneimageX
-        Anne.destroy()
-        Anne = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Anneimage,
-                      command=lambda: click(Anneimage), state=DISABLED)
-
-    if name == Bernardimage:
-        guess = "Bernard"
-        Bernardimage = BernardimageX
-        Bernard.destroy()
-        Bernard = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Bernardimage,
-                     command=lambda: click(Bernardimage), state=DISABLED)
-    if name == Billimage:
-        guess = "Bill"
-        Billimage = BillimageX
-        Bill.destroy()
-        Bill = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Billimage,
-                      command=lambda: click(Billimage), state=DISABLED)
-    if name == Charlesimage:
-        guess = "Charles"
-        Charlesimage = CharlesimageX
-        Charles.destroy()
-        Charles = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Charlesimage,
-                         command=lambda: click(Charlesimage), state=DISABLED)
-
-    if name == Claireimage:
-        guess = "Claire"
-        Claireimage = ClaireimageX
-        Claire.destroy()
-        Claire = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Claireimage,
-                        command=lambda: click(Claireimage), state=DISABLED)
-
-    if name == Davidimage:
-        guess = "David"
-        Davidimage = DavidimageX
-        David.destroy()
-        David = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Davidimage,
-                       command=lambda: click(Davidimage), state=DISABLED)
-
-    if name == Ericimage:
-        guess = "Eric"
-        Ericimage = EricimageX
-        Eric.destroy()
-        Eric = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Ericimage,
-                      command=lambda: click(Ericimage), state=DISABLED)
-
-    if name == Fransimage:
-        guess = "Frans"
-        Fransimage = FransimageX
-        Frans.destroy()
-        Frans = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Fransimage,
-                       command=lambda: click(Fransimage), state=DISABLED)
-
-    if name == Georgeimage:
-        guess = "George"
-        Georgeimage = GeorgeimageX
-        George.destroy()
-        George = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Georgeimage,
-                        command=lambda: click(Georgeimage), state=DISABLED)
-
-    if name == Hermanimage:
-        guess = "Herman"
-        Hermanimage = HermanimageX
-        Herman.destroy()
-        Herman = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Hermanimage,
-                        command=lambda: click(Hermanimage), state=DISABLED)
-
-    if name == Joeimage:
-        guess = "Joe"
-        Joeimage = JoeimageX
-        Joe.destroy()
-        Joe = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Joeimage,
-                     command=lambda: click(Joeimage), state=DISABLED)
-
-    if name == Mariaimage:
-        guess = "Maria"
-        Mariaimage = MariaimageX
-        Maria.destroy()
-        Maria = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Mariaimage,
-                       command=lambda: click(Mariaimage), state=DISABLED)
-
-    if name == Maximage:
-        guess = "Max"
-        Maximage = MaximageX
-        Max.destroy()
-        Max = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Maximage,
-                     command=lambda: click(Maximage), state=DISABLED)
-
-    if name == Paulimage:
-        guess = "Paul"
-        Paulimage = PaulimageX
-        Paul.destroy()
-        Paul = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Paulimage,
-                      command=lambda: click(Paulimage), state=DISABLED)
-
-    if name == Peterimage:
-        guess = "Peter"
-        Peterimage = PeterimageX
-        Peter.destroy()
-        Peter = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Peterimage,
-                       command=lambda: click(Peterimage), state=DISABLED)
-
-    if name == Philipimage:
-        guess = "Philip"
-        Philipimage =PhilipimageX
-        Philip.destroy()
-        Philip = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Philipimage,
-                        command=lambda: click(Philipimage), state=DISABLED)
-
-    if name == Richardimage:
-        guess = "Richard"
-        Richardimage = RichardimageX
-        Richard.destroy()
-        Richard = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Richardimage,
-                         command=lambda: click(Richardimage), state=DISABLED)
-
-    if name == Robertimage:
-        guess = "Robert"
-        Robertimage = RobertimageX
-        Robert.destroy()
-        Robert = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Robertimage,
-                        command=lambda: click(Robertimage), state=DISABLED)
-
-    if name == Samimage:
-        guess = "Sam"
-        Samimage = SamimageX
-        Sam.destroy()
-        Sam = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Samimage,
-                     command=lambda: click(Samimage), state=DISABLED)
-
-    if name == Susanimage:
-        guess = "Susan"
-        Susanimage = SusanimageX
-        Susan.destroy()
-        Susan = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Susanimage,
-                       command=lambda: click(Susanimage), state=DISABLED)
-
-    if name == Tomimage:
-        guess = "Tom"
-        Tomimage = TomimageX
-        Tom.destroy()
-        Tom = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=Tomimage,
-                     command=lambda: click(Tomimage), state=DISABLED)
-
-
-
-    Alex.grid(row=0, column=0)
-    Alfred.grid(row=0, column=1)
-    Anita.grid(row=0, column=2)
-    Anne.grid(row=0, column=3)
-    Bernard.grid(row=0, column=4)
-    Bill.grid(row=0, column=5)
-    Charles.grid(row=0, column=6)
-    Claire.grid(row=0, column=7)
-    David.grid(row=1, column=0)
-    Eric.grid(row=1, column=1)
-    Frans.grid(row=1, column=2)
-    George.grid(row=1, column=3)
-    Herman.grid(row=1, column=4)
-    Joe.grid(row=1, column=5)
-    Maria.grid(row=1, column=6)
-    Max.grid(row=1, column=7)
-    Paul.grid(row=2, column=0)
-    Peter.grid(row=2, column=1)
-    Philip.grid(row=2, column=2)
-    Richard.grid(row=2, column=3)
-    Robert.grid(row=2, column=4)
-    Sam.grid(row=2, column=5)
-    Susan.grid(row=2, column=6)
-    Tom.grid(row=2, column=7)
-    if guess == choice1.name:
-        print("winner")
-        reset()
-    return(guess)
 
 
 def click(name):
     global urchar
     global choice
     global yourcharcter
-    if urchar == start: #CHARECTER SELECTION
+    if urchar == start: #player CHARECTER SELECTION
         urchar = (people[people2.index(name)].image)
         choice.destroy()
         yourcharcter.destroy()
@@ -425,6 +181,11 @@ def click(name):
     else:
         if name == choice1.name:
             print("winner")
+            for person in people:
+                if person.name != name:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=person.imageX, state=DISABLED)
+                    person.variable.grid(row=person.row, column=person.column)
             #winner() #add winner animation later
         else:
             (people[people2.index(name)].variable).destroy()
@@ -444,11 +205,29 @@ def hat():
                 (person.variable).destroy()
                 person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
                 (person.variable).grid(row=person.row,column=person.column)
+    elif choie1.hat == False:
+        for person in people:
+            if person. hat == True:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
 def glasses():
     global glasses
     glasses.destroy()
     glasses = Button(questionFrame, bg="tan", fg="brown", text="Do they have glasses?",state = DISABLED)
     glasses.grid(row=0, column=1)
+    if choice1.glasses == True:
+        for person in people:
+            if person. glasses == False:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
+    elif choie1.glasses == False:
+        for person in people:
+            if person.glasses == True:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
 def sex():
     global man
     global woman
@@ -458,31 +237,104 @@ def sex():
     woman = Button(questionFrame, bg="tan", fg="brown", text="Are they a woman?  ",state = DISABLED)
     man.grid(row=0, column=0)
     woman.grid(row=1, column=0)
+    if choice1.male == True:
+        for person in people:
+            if person.male == False:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
+    elif choie1.male == False:
+        for person in people:
+            if person.male == True:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
 def bald():
     global bald
     bald.destroy()
     bald = Button(questionFrame, bg="tan", fg="brown", text="Are they bald?",state = DISABLED)
     bald.grid(row=2, column=1)
+    if choice1.bald == True:
+        for person in people:
+            if person.bald == False:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
+    elif choie1.bald == False:
+        for person in people:
+            if person.bald == True:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
 def beard():
     global beard
     beard.destroy()
     beard = Button(questionFrame, bg="tan", fg="brown", text="Do they have a beard?",state = DISABLED)
     beard.grid(row=3, column=1)
+    if choice1.beard == True:
+        for person in people:
+            if person.beard == False:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
+    elif choie1.beard == False:
+        for person in people:
+            if person.beard == True:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
 def cheeks():
     global rosiecheeks
     rosiecheeks.destroy()
     rosiecheeks=Button(questionFrame, bg="tan",fg="brown",text="Do they have rosie cheeks?",state = DISABLED)
     rosiecheeks.grid(row=1, column=1)
+    if choice1.rosie_cheeks == True:
+        for person in people:
+            if person.rosie_cheeks == False:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
+    elif choie1.rosie_cheeks == False:
+        for person in people:
+            if person.rosie_cheeks == True:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
 def mustache():
     global mustache
     mustache.destroy()
     mustache=Button(questionFrame2,bg="tan",fg="brown", text="Do they have a mustache?",state = DISABLED)
     mustache.grid(row=0, column=0)
+    if choice1.mustache == True:
+        for person in people:
+            if person.mustache == False:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
+    elif choie1.mustache == False:
+        for person in people:
+            if person.mustache == True:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
+    
 def longhair():
     global longhair
     longhair.destroy()
     longhair=Button(questionFrame2,bg="tan",fg="brown", text="Do they have long hair?",state = DISABLED)
     longhair.grid(row=1, column=0)
+    if choice1.long_hair == True:
+        for person in people:
+            if person.long_hair == False:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
+    elif choie1.long_hair == False:
+        for person in people:
+            if person.long_hair == True:
+                (person.variable).destroy()
+                person.variable=Button(mainFrame,bg="yellow",borderwidth=0,padx=x,pady=y,image=person.imageX,state=DISABLED)
+                (person.variable).grid(row=person.row,column=person.column)
 def hair(color):
     global blonde
     global black
@@ -493,22 +345,93 @@ def hair(color):
         blonde.destroy()
         blonde = Button(questionFrame2, bg="tan", fg="brown", text="Do they have blonde hair? ",state = DISABLED)
         blonde.grid(row=2, column=0)
+        if choice1.long_hair == True:
+            for person in people:
+                if person.long_hair == False:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
+        elif choie1.long_hair == False:
+            for person in people:
+                if person.long_hair == True:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
+        
     if color == "black":
         black.destroy()
         black = Button(questionFrame2, bg="tan", fg="brown", text="Do they have black hair?",state = DISABLED )
         black.grid(row=3, column=0)
+        if choice1.long_hair == True:
+            for person in people:
+                if person.long_hair == False:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
+        elif choie1.long_hair == False:
+            for person in people:
+                if person.long_hair == True:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
     if color == "red":
         red.destroy()
         red = Button(questionFrame2, bg="tan", fg="brown", text="Do they have red hair? ",state = DISABLED)
         red.grid(row=0, column=1)
+        if choice1.long_hair == True:
+            for person in people:
+                if person.long_hair == False:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
+        elif choie1.long_hair == False:
+            for person in people:
+                if person.long_hair == True:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
     if color == "brown":
         brown.destroy()
         brown = Button(questionFrame2, bg="tan", fg="brown", text="Do they have brown hair? ",state = DISABLED)
         brown.grid(row=1, column=1)
+        if choice1.long_hair == True:
+            for person in people:
+                if person.long_hair == False:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
+        elif choie1.long_hair == False:
+            for person in people:
+                if person.long_hair == True:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
     if color == "white":
         white.destroy()
         white = Button(questionFrame2, bg="tan", fg="brown", text="Do they have white hair?",state = DISABLED)
         white.grid(row=2, column=1)
+        if choice1.long_hair == True:
+            for person in people:
+                if person.long_hair == False:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
+        elif choie1.long_hair == False:
+            for person in people:
+                if person.long_hair == True:
+                    (person.variable).destroy()
+                    person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
+                                             state=DISABLED)
+                    (person.variable).grid(row=person.row, column=person.column)
 hat=Button(questionFrame,bg="tan",fg="brown", text="Do they have a hat?",command=hat)
 glasses=Button(questionFrame,bg="tan",fg="brown", text="Do they have glasses?",command=glasses)
 man=Button(questionFrame,bg="tan",fg="brown",   text="Are they a man?    ",command=sex)
