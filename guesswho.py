@@ -3,7 +3,6 @@ from PIL import Image, ImageTk
 from person import person
 from tkinter import messagebox
 import random
-
 root = Tk()
 root.title("Guess Who!")
 root.bg = "yellow"
@@ -186,7 +185,7 @@ Robert.grid(row=M21.row, column=M21.column)
 Sam.grid(row=M22.row, column=M22.column)
 Susan.grid(row=M23.row, column=M23.column)
 Tom.grid(row=M24.row, column=M24.column)
-questions = ["do they have a hat?", "Are they wearing glasses?","Are they a woman?",
+questions = ["do they have a hat?","Are they a woman?",
              "Are they bald?","Do they have a mustache?", "Do they have a beard?",
              "Do they have rosie-cheeks?", "Do they have long hair?", "Do they have red hair?",
              "Do they have blonde hair?", "Do they have brown hair?", "Do they have black hair?",
@@ -203,7 +202,7 @@ def machineguess():
     global people3
     quest = random.randint(0,(len(questions)-1))
     responce = messagebox.askyesno("Question", questions[quest])
-    track = question2.index(questions[quest])
+    track = questions2.index(questions[quest])
     if responce == 1:
         if track == 0:
             for person in people3:
@@ -310,7 +309,16 @@ def machineguess():
             for person in people3:
                 if person.hair_color == "white":
                     people3.remove(person)
-    print(people3)
+    print(questions[quest])
+    if responce == 1:
+        print("yes")
+    else:
+        print("no")
+    for peeps in people3:
+        print(peeps.name)
+    print("============================")
+    questions.remove(questions[quest])
+    print(questions)
 def click(name):
     global urchar
     global choice
@@ -491,7 +499,7 @@ def mustache():
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     machineguess()
-    
+
 def longhair():
     global longhair
     longhair.destroy()
