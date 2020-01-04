@@ -184,8 +184,131 @@ Robert.grid(row=M21.row, column=M21.column)
 Sam.grid(row=M22.row, column=M22.column)
 Susan.grid(row=M23.row, column=M23.column)
 Tom.grid(row=M24.row, column=M24.column)
+questions = ["do they have a hat?", "Are they wearing glasses?","Are they a woman?",
+             "Are they bald?","Do they have a mustache?", "Do they have a beard?",
+             "Do they have rosie-cheeks?", "Do they have long hair?", "Do they have red hair?",
+             "Do they have blonde hair?", "Do they have brown hair?", "Do they have black hair?",
+             "Do they have white hair?"]
+questions2 = ["do they have a hat?", "Are they wearing glasses?","Are they a woman?",
+             "Are they bald?","Do they have a mustache?", "Do they have a beard?",
+             "Do they have rosie-cheeks?", "Do they have long hair?", "Do they have red hair?",
+             "Do they have blonde hair?", "Do they have brown hair?", "Do they have black hair?",
+             "Do they have white hair?"]
+people3 = [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16, M17, M18, M19, M20, M21, M22, M23, M24]
 
-
+def machineguess():
+    global questions
+    global people3
+    quest = random.randint(0,(len(questions)-1))
+    responce = messagebox.askyesno("Question", questions[quest])
+    track = question2.index(questions[quest])
+    if responce == 1:
+        if track == 0:
+            for person in people3:
+                if person.hat == False:
+                    people3.remove(person)
+        if track == 1:
+            for person in people3:
+                if person.glasses == False:
+                    people3.remove(person)
+        if track == 2:
+            for person in people3:
+                if person.male == True:
+                    people3.remove(person)
+        if track == 3:
+            for person in people3:
+                if person.bald == False:
+                    people3.remove(person)
+        if track == 4:
+            for person in people3:
+                if person.mustache == False:
+                    people3.remove(person)
+        if track == 5:
+            for person in people3:
+                if person.beard == False:
+                    people3.remove(person)
+        if track == 6:
+            for person in people3:
+                if person.rosie_cheeks == False:
+                    people3.remove(person)
+        if track == 7:
+            for person in people3:
+                if person.long_hair == False:
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color != "red":
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color != "blonde":
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color != "brown":
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color != "black":
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color != "white":
+                    people3.remove(person)
+    if responce == 0:
+        if track == 0:
+            for person in people3:
+                if person.hat == True:
+                    people3.remove(person)
+        if track == 1:
+            for person in people3:
+                if person.glasses == True:
+                    people3.remove(person)
+        if track == 2:
+            for person in people3:
+                if person.male == False:
+                    people3.remove(person)
+        if track == 3:
+            for person in people3:
+                if person.bald == True:
+                    people3.remove(person)
+        if track == 4:
+            for person in people3:
+                if person.mustache == True:
+                    people3.remove(person)
+        if track == 5:
+            for person in people3:
+                if person.beard == True:
+                    people3.remove(person)
+        if track == 6:
+            for person in people3:
+                if person.rosie_cheeks == True:
+                    people3.remove(person)
+        if track == 7:
+            for person in people3:
+                if person.long_hair == True:
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color == "red":
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color == "blonde":
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color == "brown":
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color == "black":
+                    people3.remove(person)
+        if track == 8:
+            for person in people3:
+                if person.hair_color == "white":
+                    people3.remove(person)
+    print(people3)
 def click(name):
     global urchar
     global choice
@@ -214,7 +337,7 @@ def click(name):
                                                           image=people[people2.index(name)].imageX, state=DISABLED)
             (people[people2.index(name)].variable).grid(row=(people[people2.index(name)].row),
                                                         column=(people[people2.index(name)].column))
-
+            machineguess()
 
 def hat():
     global hat
@@ -235,7 +358,7 @@ def hat():
                 person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
-
+    machineguess()
 
 def glasses():
     global glasses
@@ -256,7 +379,7 @@ def glasses():
                 person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
-
+    machineguess()
 
 def sex():
     global man
@@ -281,7 +404,7 @@ def sex():
                 person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
-
+    machineguess()
 
 def bald():
     global bald
@@ -302,7 +425,7 @@ def bald():
                 person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
-
+    machineguess()
 
 def beard():
     global beard
@@ -323,7 +446,7 @@ def beard():
                 person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
-
+    machineguess()
 
 def cheeks():
     global rosiecheeks
@@ -344,7 +467,7 @@ def cheeks():
                 person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
-
+    machineguess()
 
 def mustache():
     global mustache
@@ -365,8 +488,8 @@ def mustache():
                 person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
-
-
+    machineguess()
+    
 def longhair():
     global longhair
     longhair.destroy()
@@ -386,7 +509,7 @@ def longhair():
                 person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                          state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
-
+    machineguess()
 
 def hair(color):
     global blonde
@@ -485,7 +608,7 @@ def hair(color):
                     person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
                                              state=DISABLED)
                     (person.variable).grid(row=person.row, column=person.column)
-
+    machineguess()
 
 hat = Button(questionFrame, bg="tan", fg="brown", text="Do they have a hat?", command=hat)
 glasses = Button(questionFrame, bg="tan", fg="brown", text="Do they have glasses?", command=glasses)
