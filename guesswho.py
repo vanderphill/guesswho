@@ -120,7 +120,7 @@ M3 = person("Anita", Anita, Anitaimage1, AnitaimageX, False, "blonde", False, Fa
 M4 = person("Anne", Anne, Anneimage1, AnneimageX, False, "black", False, False, False, False, False, False, False, 0, 3)
 M5 = person("Bernard", Bernard, Bernardimage1, BernardimageX, True, "brown", False, True, False, False, False, False,
             False, 0, 4)
-M6 = person("Bill", Bill, Billimage1, BernardimageX, False, "red", False, True, True, False, True, True, False, 0, 5)
+M6 = person("Bill", Bill, Billimage1, BillimageX, False, "red", False, True, True, False, True, True, False, 0, 5)
 M7 = person("Charles", Charles, Charlesimage1, CharlesimageX, False, "blonde", False, True, False, True, False, False,
             False, 0, 6)
 M8 = person("Claire", Claire, Claireimage1, ClaireimageX, True, "red", True, False, False, False, False, False, False,
@@ -196,128 +196,179 @@ questions2 = ["do they have a hat?", "Are they wearing glasses?","Are they a wom
              "Do they have blonde hair?", "Do they have brown hair?", "Do they have black hair?",
              "Do they have white hair?"]
 people3 = [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16, M17, M18, M19, M20, M21, M22, M23, M24]
+people4 = [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16, M17, M18, M19, M20, M21, M22, M23, M24]
 
 def machineguess():
     global questions
     global people3
-    quest = random.randint(0,(len(questions)-1))
+    global people4
+    quest =  random.randint(0,(len(questions)-1))
+    blah = questions[quest]
     responce = messagebox.askyesno("Question", questions[quest])
     track = questions2.index(questions[quest])
+    print(questions2[track])
     if responce == 1:
         if track == 0:
-            for person in people3:
-                if person.hat == False:
-                    people3.remove(person)
+            for item in people3:
+                if item.hat == False:
+                    people4.remove(item)
         if track == 1:
-            for person in people3:
-                if person.glasses == False:
-                    people3.remove(person)
+            for item in people3:
+                if item.glasses == False:
+                    people4.remove(item)
         if track == 2:
-            for person in people3:
-                if person.male == True:
-                    people3.remove(person)
+            for item in people3:
+                if item.male == True:
+                    people4.remove(item)
         if track == 3:
-            for person in people3:
-                if person.bald == False:
-                    people3.remove(person)
+            for item in people3:
+                if item.bald == False:
+                    people4.remove(item)
         if track == 4:
-            for person in people3:
-                if person.mustache == False:
-                    people3.remove(person)
+            for item in people3:
+                if item.mustache == False:
+                    people4.remove(item)
         if track == 5:
-            for person in people3:
-                if person.beard == False:
-                    people3.remove(person)
+            for item in people3:
+                if item.beard == False:
+                    people4.remove(item)
         if track == 6:
-            for person in people3:
-                if person.rosie_cheeks == False:
-                    people3.remove(person)
+            for item in people3:
+                if item.rosie_cheeks == False:
+                    people4.remove(item)
         if track == 7:
-            for person in people3:
-                if person.long_hair == False:
-                    people3.remove(person)
+            for item in people3:
+                if item.long_hair == False:
+                    people4.remove(item)
         if track == 8:
-            for person in people3:
-                if person.hair_color != "red":
-                    people3.remove(person)
-        if track == 8:
-            for person in people3:
-                if person.hair_color != "blonde":
-                    people3.remove(person)
-        if track == 8:
-            for person in people3:
-                if person.hair_color != "brown":
-                    people3.remove(person)
-        if track == 8:
-            for person in people3:
-                if person.hair_color != "black":
-                    people3.remove(person)
-        if track == 8:
-            for person in people3:
-                if person.hair_color != "white":
-                    people3.remove(person)
+            for item in people3:
+                if item.hair_color != "red":
+                    people4.remove(item)
+                    if "Do they have blonde hair?" in questions:
+                        questions.remove("Do they have blonde hair?")
+                    if "Do they have brown hair?" in questions:
+                        questions.remove("Do they have brown hair?")
+                    if "Do they have black hair?" in questions:
+                        questions.remove("Do they have black hair?")
+                    if "Do they have white hair?" in questions:
+                        questions.remove("Do they have white hair?")
+        if track == 9:
+            for item in people3:
+                if item.hair_color != "blonde":
+                    people4.remove(item)
+                    if "Do they have white hair?" in questions:
+                        questions.remove("Do they have white hair?")
+                    if "Do they have brown hair?" in questions:
+                        questions.remove("Do they have brown hair?")
+                    if "Do they have black hair?" in questions:
+                        questions.remove("Do they have black hair?")
+                    if "Do they have red hair?" in questions:
+                        questions.remove("Do they have red hair?")
+        if track == 10:
+            for item in people3:
+                if item.hair_color != "brown":
+                    people4.remove(item)
+                    if "Do they have blonde hair?" in questions:
+                        questions.remove("Do they have blonde hair?")
+                    if "Do they have brown hair?" in questions:
+                        questions.remove("Do they have white hair?")
+                    if "Do they have white hair?" in questions:
+                        questions.remove("Do they have black hair?")
+                    if "Do they have red hair?" in questions:
+                        questions.remove("Do they have red hair?")
+        if track == 11:
+            for item in people3:
+                if item.hair_color != "black":
+                    people4.remove(item)
+                    if "Do they have blonde hair?" in questions:
+                        questions.remove("Do they have blonde hair?")
+                    if "Do they have brown hair?" in questions:
+                        questions.remove("Do they have brown hair?")
+                    if "Do they have white hair?" in questions:
+                        questions.remove("Do they have white hair?")
+                    if "Do they have red hair?" in questions:
+                        questions.remove("Do they have red hair?")
+        if track == 12:
+            for item in people3:
+                if item.hair_color != "white":
+                    people4.remove(item)
+                    if "Do they have blonde hair?" in questions:
+                        questions.remove("Do they have blonde hair?")
+                    if "Do they have brown hair?" in questions:
+                        questions.remove("Do they have brown hair?")
+                    if "Do they have black hair?" in questions:
+                        questions.remove("Do they have black hair?")
+                    if "Do they have red hair?" in questions:
+                        questions.remove("Do they have red hair?")
     if responce == 0:
         if track == 0:
-            for person in people3:
-                if person.hat == True:
-                    people3.remove(person)
+            for item in people3:
+                if item.hat == True:
+                    people4.remove(item)
         if track == 1:
-            for person in people3:
-                if person.glasses == True:
-                    people3.remove(person)
+            for item in people3:
+                if item.glasses == True:
+                    people4.remove(item)
         if track == 2:
-            for person in people3:
-                if person.male == False:
-                    people3.remove(person)
+            for item in people3:
+                if item.male == False:
+                    people4.remove(item)
         if track == 3:
-            for person in people3:
-                if person.bald == True:
-                    people3.remove(person)
+            for item in people3:
+                if item.bald == True:
+                    people4.remove(item)
         if track == 4:
-            for person in people3:
-                if person.mustache == True:
-                    people3.remove(person)
+            for item in people3:
+                if item.mustache == True:
+                    people4.remove(item)
         if track == 5:
-            for person in people3:
-                if person.beard == True:
-                    people3.remove(person)
+            for item in people3:
+                if item.beard == True:
+                    people4.remove(item)
         if track == 6:
-            for person in people3:
-                if person.rosie_cheeks == True:
-                    people3.remove(person)
+            for item in people3:
+                if item.rosie_cheeks == True:
+                    people4.remove(item)
         if track == 7:
-            for person in people3:
-                if person.long_hair == True:
-                    people3.remove(person)
+            for item in people3:
+                if item.long_hair == True:
+                    people4.remove(item)
         if track == 8:
-            for person in people3:
-                if person.hair_color == "red":
-                    people3.remove(person)
-        if track == 8:
-            for person in people3:
-                if person.hair_color == "blonde":
-                    people3.remove(person)
-        if track == 8:
-            for person in people3:
-                if person.hair_color == "brown":
-                    people3.remove(person)
-        if track == 8:
-            for person in people3:
-                if person.hair_color == "black":
-                    people3.remove(person)
-        if track == 8:
-            for person in people3:
-                if person.hair_color == "white":
-                    people3.remove(person)
+            for item in people3:
+                if item.hair_color == "red":
+                    people4.remove(item)
+        if track == 9:
+            for item in people3:
+                if item.hair_color == "blonde":
+                    people4.remove(item)
+        if track == 10:
+            for item in people3:
+                if item.hair_color == "brown":
+                    people4.remove(item)
+        if track ==11:
+            for item in people3:
+                if item.hair_color == "black":
+                    people4.remove(item)
+        if track == 12:
+            for item in people3:
+                if item.hair_color == "white":
+                    people4.remove(item)
+    print("removed")
+    for item in people3:
+        if item not in people4:
+            print(item.name)
+
+    people3 = people4
     print(questions[quest])
+    print(blah)
     if responce == 1:
         print("yes")
     else:
         print("no")
-    for peeps in people3:
+    for peeps in people4:
         print(peeps.name)
     print("============================")
-    questions.remove(questions[quest])
+    questions.remove(blah)
     print(questions)
 def click(name):
     global urchar
