@@ -1,6 +1,8 @@
 from tkinter import *
 from PIL import Image, ImageTk
 from person import person
+from tkinter import messagebox
+import random
 
 root = Tk()
 root.title("Guess Who!")
@@ -155,7 +157,7 @@ people = [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16,
 people2 = ['Alex', 'Alfred', 'Anita', 'Anne', 'Bernard', 'Bill', 'Charles', 'Claire', 'David', 'Eric', 'Frans',
            'George', 'Herman', 'Joe', 'Maria', 'Max', 'Paul', 'Peter', 'Philip', 'Richard', 'Robert', 'Sam', 'Susan',
            'Tom']
-import random
+
 
 choice1 = people[random.randint(0, 23)]  # computer picks person at random
 print(choice1.name)
