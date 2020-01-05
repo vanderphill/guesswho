@@ -196,14 +196,10 @@ questions2 = ["do they have a hat?", "Are they wearing glasses?","Are they a wom
              "Do they have blonde hair?", "Do they have brown hair?", "Do they have black hair?",
              "Do they have white hair?"]
 people3 = [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16, M17, M18, M19, M20, M21, M22, M23, M24]
-people4 = [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16, M17, M18, M19, M20, M21, M22, M23, M24]
 
 def machineguess():
     global questions
     global people3
-    global people4
-    for peeps in people4:
-        print(peeps.name)
     quest =  random.randint(0,(len(questions)-1))
     blah = questions[quest]
     responce = messagebox.askyesno("Question", questions[quest])
@@ -213,170 +209,168 @@ def machineguess():
         if track == 0:
             for item in people3:
                 if item.hat == False:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 1:
             for item in people3:
                 if item.glasses == False:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 2:
             for item in people3:
                 if item.male == True:
-                    people4.remove(item)
+                    people3[people3.index(item)] = 0
         if track == 3:
             for item in people3:
                 if item.bald == False:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 4:
             for item in people3:
                 if item.mustache == False:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 5:
             for item in people3:
                 if item.beard == False:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 6:
             for item in people3:
                 if item.rosie_cheeks == False:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 7:
             for item in people3:
                 if item.long_hair == False:
-                    people4.remove(item)
+                    people3[people3.index(item)] = 0
         if track == 8:
             for item in people3:
                 if item.hair_color != "red":
-                    people4.remove(item)
-                    if "Do they have blonde hair?" in questions:
-                        questions.remove("Do they have blonde hair?")
-                    if "Do they have brown hair?" in questions:
-                        questions.remove("Do they have brown hair?")
-                    if "Do they have black hair?" in questions:
-                        questions.remove("Do they have black hair?")
-                    if "Do they have white hair?" in questions:
-                        questions.remove("Do they have white hair?")
+                    people3[people3.index(item)]=0
+            if "Do they have blonde hair?" in questions:
+                questions.remove("Do they have blonde hair?")
+            if "Do they have brown hair?" in questions:
+                questions.remove("Do they have brown hair?")
+            if "Do they have black hair?" in questions:
+                questions.remove("Do they have black hair?")
+            if "Do they have white hair?" in questions:
+                questions.remove("Do they have white hair?")
         if track == 9:
             for item in people3:
                 if item.hair_color != "blonde":
-                    people4.remove(item)
-                    if "Do they have white hair?" in questions:
-                        questions.remove("Do they have white hair?")
-                    if "Do they have brown hair?" in questions:
-                        questions.remove("Do they have brown hair?")
-                    if "Do they have black hair?" in questions:
-                        questions.remove("Do they have black hair?")
-                    if "Do they have red hair?" in questions:
-                        questions.remove("Do they have red hair?")
+                    people3[people3.index(item)] = 0
+            if "Do they have white hair?" in questions:
+                questions.remove("Do they have white hair?")
+            if "Do they have brown hair?" in questions:
+                questions.remove("Do they have brown hair?")
+            if "Do they have black hair?" in questions:
+                questions.remove("Do they have black hair?")
+            if "Do they have red hair?" in questions:
+                questions.remove("Do they have red hair?")
 
         if track == 10:
             for item in people3:
                 if item.hair_color != "brown":
-                    people4.remove(item)
-                    if "Do they have blonde hair?" in questions:
-                        questions.remove("Do they have blonde hair?")
-                    if "Do they have brown hair?" in questions:
-                        questions.remove("Do they have white hair?")
-                    if "Do they have white hair?" in questions:
-                        questions.remove("Do they have black hair?")
-                    if "Do they have red hair?" in questions:
-                        questions.remove("Do they have red hair?")
+                    people3[people3.index(item)]=0
+            if "Do they have blonde hair?" in questions:
+                questions.remove("Do they have blonde hair?")
+            if "Do they have brown hair?" in questions:
+                questions.remove("Do they have white hair?")
+            if "Do they have white hair?" in questions:
+                questions.remove("Do they have black hair?")
+            if "Do they have red hair?" in questions:
+                questions.remove("Do they have red hair?")
 
         if track == 11:
             for item in people3:
                 if item.hair_color != "black":
-                    people4.remove(item)
-                    if "Do they have blonde hair?" in questions:
-                        questions.remove("Do they have blonde hair?")
-                    if "Do they have brown hair?" in questions:
-                        questions.remove("Do they have brown hair?")
-                    if "Do they have white hair?" in questions:
-                        questions.remove("Do they have white hair?")
-                    if "Do they have red hair?" in questions:
-                        questions.remove("Do they have red hair?")
+                    people3[people3.index(item)]=0
+            if "Do they have blonde hair?" in questions:
+                questions.remove("Do they have blonde hair?")
+            if "Do they have brown hair?" in questions:
+                questions.remove("Do they have brown hair?")
+            if "Do they have white hair?" in questions:
+                questions.remove("Do they have white hair?")
+            if "Do they have red hair?" in questions:
+                questions.remove("Do they have red hair?")
 
         if track == 12:
             for item in people3:
                 if item.hair_color != "white":
-                    people4.remove(item)
-                    if "Do they have blonde hair?" in questions:
-                        questions.remove("Do they have blonde hair?")
-                    if "Do they have brown hair?" in questions:
-                        questions.remove("Do they have brown hair?")
-                    if "Do they have black hair?" in questions:
-                        questions.remove("Do they have black hair?")
-                    if "Do they have red hair?" in questions:
-                        questions.remove("Do they have red hair?")
+                    people3[people3.index(item)]=0
+            if "Do they have blonde hair?" in questions:
+                questions.remove("Do they have blonde hair?")
+            if "Do they have brown hair?" in questions:
+                questions.remove("Do they have brown hair?")
+            if "Do they have black hair?" in questions:
+                questions.remove("Do they have black hair?")
+            if "Do they have red hair?" in questions:
+                questions.remove("Do they have red hair?")
 
     if responce == 0:
         if track == 0:
             for item in people3:
                 if item.hat == True:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 1:
             for item in people3:
                 if item.glasses == True:
-                    people4.remove(item)
+                    people3[people3.index(item)] = 0
         if track == 2:
             for item in people3:
                 if item.male == False:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 3:
             for item in people3:
                 if item.bald == True:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 4:
             for item in people3:
                 if item.mustache == True:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 5:
             for item in people3:
                 if item.beard == True:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 6:
             for item in people3:
                 if item.rosie_cheeks == True:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 7:
             for item in people3:
                 if item.long_hair == True:
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
         if track == 8:
             for item in people3:
                 if item.hair_color == "red":
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
 
         if track == 9:
             for item in people3:
                 if item.hair_color == "blonde":
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
 
         if track == 10:
             for item in people3:
                 if item.hair_color == "brown":
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
 
         if track ==11:
             for item in people3:
                 if item.hair_color == "black":
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
 
         if track == 12:
             for item in people3:
                 if item.hair_color == "white":
-                    people4.remove(item)
+                    people3[people3.index(item)]=0
 
-    print("removed")
-    for item in people3:
-        if item not in people4:
-            print(item.name)
+    c = people3.count(0)
+    for i in range(c):
+        people3.remove(0)
 
-    people3 = people4
 
-    print(blah)
+
     if responce == 1:
         print("yes")
     else:
         print("no")
-    for peeps in people4:
+    for peeps in people3:
         print(peeps.name)
     print("============================")
     questions.remove(blah)
