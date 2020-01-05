@@ -379,10 +379,10 @@ def machineguess():
             print("no")
         for peeps in people3:
             print(peeps.name)
-        print("============================")
+        print("============================")"""
         questions.remove(blah)
-    print(questions)
-"""
+    #print(questions)
+
 
 def click(name):
     global urchar
