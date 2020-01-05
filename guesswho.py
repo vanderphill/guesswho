@@ -1,8 +1,11 @@
+import sys
+import os
 from tkinter import *
 from PIL import Image, ImageTk
 from person import person
 from tkinter import messagebox
 import random
+
 root = Tk()
 root.title("Guess Who!")
 root.bg = "yellow"
@@ -79,77 +82,55 @@ SusanimageX = ImageTk.PhotoImage(Image.open("SusanX.png"))
 TomimageX = ImageTk.PhotoImage(Image.open("TomX.png"))
 
 Alex = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Aleximage1, command=lambda: click("Alex"))
-Alfred = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Alfredimage1,
-                command=lambda: click("Alfred"))
+Alfred = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Alfredimage1, command=lambda: click("Alfred"))
 Anita = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Anitaimage1, command=lambda: click("Anita"))
 Anne = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Anneimage1, command=lambda: click("Anne"))
-Bernard = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Bernardimage1,
-                 command=lambda: click("Bernard"))
+Bernard = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Bernardimage1, command=lambda: click("Bernard"))
 Bill = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Billimage1, command=lambda: click("Bill"))
-Charles = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Charlesimage1,
-                 command=lambda: click("Charles"))
-Claire = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Claireimage1,
-                command=lambda: click("Claire"))
+Charles = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Charlesimage1, command=lambda: click("Charles"))
+Claire = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Claireimage1, command=lambda: click("Claire"))
 David = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Davidimage1, command=lambda: click("David"))
 Eric = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Ericimage1, command=lambda: click("Eric"))
 Frans = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Fransimage1, command=lambda: click("Frans"))
-George = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Georgeimage1,
-                command=lambda: click("George"))
-Herman = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Hermanimage1,
-                command=lambda: click("Herman"))
+George = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Georgeimage1, command=lambda: click("George"))
+Herman = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Hermanimage1, command=lambda: click("Herman"))
 Joe = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Joeimage1, command=lambda: click("Joe"))
 Maria = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Mariaimage1, command=lambda: click("Maria"))
 Max = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Maximage1, command=lambda: click("Max"))
 Paul = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Paulimage1, command=lambda: click("Paul"))
 Peter = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Peterimage1, command=lambda: click("Peter"))
-Philip = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Philipimage1,
-                command=lambda: click("Philip"))
-Richard = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Richardimage1,
-                 command=lambda: click("Richard"))
-Robert = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Robertimage1,
-                command=lambda: click("Robert"))
+Philip = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Philipimage1,command=lambda: click("Philip"))
+Richard = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Richardimage1,  command=lambda: click("Richard"))
+Robert = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Robertimage1,command=lambda: click("Robert"))
 Sam = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Samimage1, command=lambda: click("Sam"))
 Susan = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Susanimage1, command=lambda: click("Susan"))
 Tom = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=Tomimage1, command=lambda: click("Tom"))
 
+
+
 M1 = person("Alex", Alex, Aleximage1, AleximageX, False, "black", False, True, False, True, False, False, False, 0, 0)
-M2 = person("Alfred", Alfred, Alfredimage1, AlfredimageX, False, "red", False, True, False, True, False, False, True, 0,
-            1)
-M3 = person("Anita", Anita, Anitaimage1, AnitaimageX, False, "blonde", False, False, False, False, False, True, True, 0,
-            2)
+M2 = person("Alfred", Alfred, Alfredimage1, AlfredimageX, False, "red", False, True, False, True, False, False, True, 0, 1)
+M3 = person("Anita", Anita, Anitaimage1, AnitaimageX, False, "blonde", False, False, False, False, False, True, True, 0,2)
 M4 = person("Anne", Anne, Anneimage1, AnneimageX, False, "black", False, False, False, False, False, False, False, 0, 3)
-M5 = person("Bernard", Bernard, Bernardimage1, BernardimageX, True, "brown", False, True, False, False, False, False,
-            False, 0, 4)
+M5 = person("Bernard", Bernard, Bernardimage1, BernardimageX, True, "brown", False, True, False, False, False, False, False, 0, 4)
 M6 = person("Bill", Bill, Billimage1, BillimageX, False, "red", False, True, True, False, True, True, False, 0, 5)
-M7 = person("Charles", Charles, Charlesimage1, CharlesimageX, False, "blonde", False, True, False, True, False, False,
-            False, 0, 6)
-M8 = person("Claire", Claire, Claireimage1, ClaireimageX, True, "red", True, False, False, False, False, False, False,
-            0, 7)
-M9 = person("David", David, Davidimage1, DavidimageX, False, "blonde", False, True, False, False, True, False, False, 1,
-            0)
+M7 = person("Charles", Charles, Charlesimage1, CharlesimageX, False, "blonde", False, True, False, True, False, False, False, 0, 6)
+M8 = person("Claire", Claire, Claireimage1, ClaireimageX, True, "red", True, False, False, False, False, False, False, 0, 7)
+M9 = person("David", David, Davidimage1, DavidimageX, False, "blonde", False, True, False, False, True, False, False, 1, 0)
 M10 = person("Eric", Eric, Ericimage1, EricimageX, True, "blonde", False, True, False, False, False, False, False, 1, 1)
-M11 = person("Frans", Frans, Fransimage1, FransimageX, False, "red", False, True, False, False, False, False, False, 1,
-             2)
-M12 = person("George", George, Georgeimage1, GeorgeimageX, True, "white", False, True, False, False, False, False,
-             False, 1, 3)
-M13 = person("Herman", Herman, Hermanimage1, HermanimageX, False, "red", False, True, True, False, False, False, False,
-             1, 4)
+M11 = person("Frans", Frans, Fransimage1, FransimageX, False, "red", False, True, False, False, False, False, False, 1, 2)
+M12 = person("George", George, Georgeimage1, GeorgeimageX, True, "white", False, True, False, False, False, False, False, 1, 3)
+M13 = person("Herman", Herman, Hermanimage1, HermanimageX, False, "red", False, True, True, False, False, False, False, 1, 4)
 M14 = person("Joe", Joe, Joeimage1, JoeimageX, False, "blonde", True, True, False, False, False, False, False, 1, 5)
-M15 = person("Maria", Maria, Mariaimage1, MariaimageX, True, "brown", False, False, False, False, False, False, True, 1,
-             6)
+M15 = person("Maria", Maria, Mariaimage1, MariaimageX, True, "brown", False, False, False, False, False, False, True, 1, 6)
 M16 = person("Max", Max, Maximage1, MaximageX, False, "black", False, True, False, True, False, False, False, 1, 7)
 M17 = person("Paul", Paul, Paulimage1, PaulimageX, False, "white", True, True, False, False, False, False, False, 2, 0)
-M18 = person("Peter", Peter, Peterimage1, PeterimageX, False, "white", False, True, False, False, False, False, False,
-             2, 1)
-M19 = person("Philip", Philip, Philipimage1, PhilipimageX, False, "black", False, True, False, False, True, True, False,
-             2, 2)
-M20 = person("Richard", Richard, Richardimage1, RichardimageX, False, "brown", False, True, True, True, True, False,
-             False, 2, 3)
-M21 = person("Robert", Robert, Robertimage1, RobertimageX, False, "brown", False, True, False, False, False, True,
-             False, 2, 4)
+M18 = person("Peter", Peter, Peterimage1, PeterimageX, False, "white", False, True, False, False, False, False, False, 2, 1)
+M19 = person("Philip", Philip, Philipimage1, PhilipimageX, False, "black", False, True, False, False, True, True, False, 2, 2)
+M20 = person("Richard", Richard, Richardimage1, RichardimageX, False, "brown", False, True, True, True, True, False, False, 2, 3)
+M21 = person("Robert", Robert, Robertimage1, RobertimageX, False, "brown", False, True, False, False, False, True, False, 2, 4)
 M22 = person("Sam", Sam, Samimage1, SamimageX, False, "white", True, True, True, False, False, False, False, 2, 5)
-M23 = person("Susan", Susan, Susanimage1, SusanimageX, False, "white", False, False, False, False, False, True, True, 2,
-             6)
+M23 = person("Susan", Susan, Susanimage1, SusanimageX, False, "white", False, False, False, False, False, True, True, 2, 6)
 M24 = person("Tom", Tom, Tomimage1, TomimageX, False, "Black", True, True, True, False, False, False, False, 2, 7)
 
 people = [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16, M17, M18, M19, M20, M21, M22, M23, M24]
@@ -197,184 +178,212 @@ questions2 = ["do they have a hat?", "Are they wearing glasses?","Are they a wom
              "Do they have white hair?"]
 people3 = [M1, M2, M3, M4, M5, M6, M7, M8, M9, M10, M11, M12, M13, M14, M15, M16, M17, M18, M19, M20, M21, M22, M23, M24]
 
+def reload():
+    python = sys.executable
+    os.execl(python, python, *sys.argv)
+
+
 def machineguess():
+
     global questions
     global people3
-    quest =  random.randint(0,(len(questions)-1))
-    blah = questions[quest]
-    responce = messagebox.askyesno("Question", questions[quest])
-    track = questions2.index(questions[quest])
-    print(questions2[track])
-    if responce == 1:
-        if track == 0:
-            for item in people3:
-                if item.hat == False:
-                    people3[people3.index(item)]=0
-        if track == 1:
-            for item in people3:
-                if item.glasses == False:
-                    people3[people3.index(item)]=0
-        if track == 2:
-            for item in people3:
-                if item.male == True:
-                    people3[people3.index(item)] = 0
-        if track == 3:
-            for item in people3:
-                if item.bald == False:
-                    people3[people3.index(item)]=0
-        if track == 4:
-            for item in people3:
-                if item.mustache == False:
-                    people3[people3.index(item)]=0
-        if track == 5:
-            for item in people3:
-                if item.beard == False:
-                    people3[people3.index(item)]=0
-        if track == 6:
-            for item in people3:
-                if item.rosie_cheeks == False:
-                    people3[people3.index(item)]=0
-        if track == 7:
-            for item in people3:
-                if item.long_hair == False:
-                    people3[people3.index(item)] = 0
-        if track == 8:
-            for item in people3:
-                if item.hair_color != "red":
-                    people3[people3.index(item)]=0
-            if "Do they have blonde hair?" in questions:
-                questions.remove("Do they have blonde hair?")
-            if "Do they have brown hair?" in questions:
-                questions.remove("Do they have brown hair?")
-            if "Do they have black hair?" in questions:
-                questions.remove("Do they have black hair?")
-            if "Do they have white hair?" in questions:
-                questions.remove("Do they have white hair?")
-        if track == 9:
-            for item in people3:
-                if item.hair_color != "blonde":
-                    people3[people3.index(item)] = 0
-            if "Do they have white hair?" in questions:
-                questions.remove("Do they have white hair?")
-            if "Do they have brown hair?" in questions:
-                questions.remove("Do they have brown hair?")
-            if "Do they have black hair?" in questions:
-                questions.remove("Do they have black hair?")
-            if "Do they have red hair?" in questions:
-                questions.remove("Do they have red hair?")
+    #print(people3[0].name)
+    if len(people3) < 2:
+        win = messagebox.askyesno("Final Guess", "Your person is " + people3[0].name + "\n Would you like to play again?")
+        if win == 1:
+            reload()
+        else:
+            exit()
+    if (len(people3) < 3) and (people3[0].name == "Alex") and (people3[0].name == "Max"):
+        responce = messagebox.askyesno("Question", "Is your person Max?")
+        if responce == 1:
+            win1 = messagebox.askyesno("Question", "Your person is Max \n Would you like to play again?")
+            if win1 == 1:
+                reload()
+            else:
+                exit()
+        else:
+            people3.remove(people3.name("max"))
 
-        if track == 10:
-            for item in people3:
-                if item.hair_color != "brown":
-                    people3[people3.index(item)]=0
-            if "Do they have blonde hair?" in questions:
-                questions.remove("Do they have blonde hair?")
-            if "Do they have brown hair?" in questions:
-                questions.remove("Do they have white hair?")
-            if "Do they have white hair?" in questions:
-                questions.remove("Do they have black hair?")
-            if "Do they have red hair?" in questions:
-                questions.remove("Do they have red hair?")
+    if urchar != start:
+        quest =  random.randint(0,(len(questions)-1))
+        blah = questions[quest]
+        responce = messagebox.askyesno("Question", questions[quest])
+        track = questions2.index(questions[quest])
+        #print(questions2[track])
 
-        if track == 11:
-            for item in people3:
-                if item.hair_color != "black":
-                    people3[people3.index(item)]=0
-            if "Do they have blonde hair?" in questions:
-                questions.remove("Do they have blonde hair?")
-            if "Do they have brown hair?" in questions:
-                questions.remove("Do they have brown hair?")
-            if "Do they have white hair?" in questions:
-                questions.remove("Do they have white hair?")
-            if "Do they have red hair?" in questions:
-                questions.remove("Do they have red hair?")
+        if responce == 1:
+            if track == 0:
+                for item in people3:
+                    if item.hat == False:
+                        people3[people3.index(item)]=0
+            if track == 1:
+                for item in people3:
+                    if item.glasses == False:
+                        people3[people3.index(item)]=0
+            if track == 2:
+                for item in people3:
+                    if item.male == True:
+                        people3[people3.index(item)] = 0
+            if track == 3:
+                for item in people3:
+                    if item.bald == False:
+                        people3[people3.index(item)]=0
+            if track == 4:
+                for item in people3:
+                    if item.mustache == False:
+                        people3[people3.index(item)]=0
+            if track == 5:
+                for item in people3:
+                    if item.beard == False:
+                        people3[people3.index(item)]=0
+            if track == 6:
+                for item in people3:
+                    if item.rosie_cheeks == False:
+                        people3[people3.index(item)]=0
+            if track == 7:
+                for item in people3:
+                    if item.long_hair == False:
+                        people3[people3.index(item)] = 0
+            if track == 8:
+                for item in people3:
+                    if item.hair_color != "red":
+                        people3[people3.index(item)]=0
+                if "Do they have blonde hair?" in questions:
+                    questions.remove("Do they have blonde hair?")
+                if "Do they have brown hair?" in questions:
+                    questions.remove("Do they have brown hair?")
+                if "Do they have black hair?" in questions:
+                    questions.remove("Do they have black hair?")
+                if "Do they have white hair?" in questions:
+                    questions.remove("Do they have white hair?")
+            if track == 9:
+                for item in people3:
+                    if item.hair_color != "blonde":
+                        people3[people3.index(item)] = 0
+                if "Do they have white hair?" in questions:
+                    questions.remove("Do they have white hair?")
+                if "Do they have brown hair?" in questions:
+                    questions.remove("Do they have brown hair?")
+                if "Do they have black hair?" in questions:
+                    questions.remove("Do they have black hair?")
+                if "Do they have red hair?" in questions:
+                    questions.remove("Do they have red hair?")
 
-        if track == 12:
-            for item in people3:
-                if item.hair_color != "white":
-                    people3[people3.index(item)]=0
-            if "Do they have blonde hair?" in questions:
-                questions.remove("Do they have blonde hair?")
-            if "Do they have brown hair?" in questions:
-                questions.remove("Do they have brown hair?")
-            if "Do they have black hair?" in questions:
-                questions.remove("Do they have black hair?")
-            if "Do they have red hair?" in questions:
-                questions.remove("Do they have red hair?")
+            if track == 10:
+                for item in people3:
+                    if item.hair_color != "brown":
+                        people3[people3.index(item)]=0
+                if "Do they have blonde hair?" in questions:
+                    questions.remove("Do they have blonde hair?")
+                if "Do they have brown hair?" in questions:
+                    questions.remove("Do they have white hair?")
+                if "Do they have white hair?" in questions:
+                    questions.remove("Do they have black hair?")
+                if "Do they have red hair?" in questions:
+                    questions.remove("Do they have red hair?")
 
-    if responce == 0:
-        if track == 0:
-            for item in people3:
-                if item.hat == True:
-                    people3[people3.index(item)]=0
-        if track == 1:
-            for item in people3:
-                if item.glasses == True:
-                    people3[people3.index(item)] = 0
-        if track == 2:
-            for item in people3:
-                if item.male == False:
-                    people3[people3.index(item)]=0
-        if track == 3:
-            for item in people3:
-                if item.bald == True:
-                    people3[people3.index(item)]=0
-        if track == 4:
-            for item in people3:
-                if item.mustache == True:
-                    people3[people3.index(item)]=0
-        if track == 5:
-            for item in people3:
-                if item.beard == True:
-                    people3[people3.index(item)]=0
-        if track == 6:
-            for item in people3:
-                if item.rosie_cheeks == True:
-                    people3[people3.index(item)]=0
-        if track == 7:
-            for item in people3:
-                if item.long_hair == True:
-                    people3[people3.index(item)]=0
-        if track == 8:
-            for item in people3:
-                if item.hair_color == "red":
-                    people3[people3.index(item)]=0
+            if track == 11:
+                for item in people3:
+                    if item.hair_color != "black":
+                        people3[people3.index(item)]=0
+                if "Do they have blonde hair?" in questions:
+                    questions.remove("Do they have blonde hair?")
+                if "Do they have brown hair?" in questions:
+                    questions.remove("Do they have brown hair?")
+                if "Do they have white hair?" in questions:
+                    questions.remove("Do they have white hair?")
+                if "Do they have red hair?" in questions:
+                    questions.remove("Do they have red hair?")
 
-        if track == 9:
-            for item in people3:
-                if item.hair_color == "blonde":
-                    people3[people3.index(item)]=0
+            if track == 12:
+                for item in people3:
+                    if item.hair_color != "white":
+                        people3[people3.index(item)]=0
+                if "Do they have blonde hair?" in questions:
+                    questions.remove("Do they have blonde hair?")
+                if "Do they have brown hair?" in questions:
+                    questions.remove("Do they have brown hair?")
+                if "Do they have black hair?" in questions:
+                    questions.remove("Do they have black hair?")
+                if "Do they have red hair?" in questions:
+                    questions.remove("Do they have red hair?")
 
-        if track == 10:
-            for item in people3:
-                if item.hair_color == "brown":
-                    people3[people3.index(item)]=0
+        if responce == 0:
+            if track == 0:
+                for item in people3:
+                    if item.hat == True:
+                        people3[people3.index(item)]=0
+            if track == 1:
+                for item in people3:
+                    if item.glasses == True:
+                        people3[people3.index(item)] = 0
+            if track == 2:
+                for item in people3:
+                    if item.male == False:
+                        people3[people3.index(item)]=0
+            if track == 3:
+                for item in people3:
+                    if item.bald == True:
+                        people3[people3.index(item)]=0
+            if track == 4:
+                for item in people3:
+                    if item.mustache == True:
+                        people3[people3.index(item)]=0
+            if track == 5:
+                for item in people3:
+                    if item.beard == True:
+                        people3[people3.index(item)]=0
+            if track == 6:
+                for item in people3:
+                    if item.rosie_cheeks == True:
+                        people3[people3.index(item)]=0
+            if track == 7:
+                for item in people3:
+                    if item.long_hair == True:
+                        people3[people3.index(item)]=0
+            if track == 8:
+                for item in people3:
+                    if item.hair_color == "red":
+                        people3[people3.index(item)]=0
 
-        if track ==11:
-            for item in people3:
-                if item.hair_color == "black":
-                    people3[people3.index(item)]=0
+            if track == 9:
+                for item in people3:
+                    if item.hair_color == "blonde":
+                        people3[people3.index(item)]=0
 
-        if track == 12:
-            for item in people3:
-                if item.hair_color == "white":
-                    people3[people3.index(item)]=0
+            if track == 10:
+                for item in people3:
+                    if item.hair_color == "brown":
+                        people3[people3.index(item)]=0
 
-    c = people3.count(0)
-    for i in range(c):
-        people3.remove(0)
+            if track ==11:
+                for item in people3:
+                    if item.hair_color == "black":
+                        people3[people3.index(item)]=0
+
+            if track == 12:
+                for item in people3:
+                    if item.hair_color == "white":
+                        people3[people3.index(item)]=0
+
+        c = people3.count(0)
+        for i in range(c):
+            people3.remove(0)
 
 
-
-    if responce == 1:
-        print("yes")
-    else:
-        print("no")
-    for peeps in people3:
-        print(peeps.name)
-    print("============================")
-    questions.remove(blah)
+"""
+        if responce == 1:
+            print("yes")
+        else:
+            print("no")
+        for peeps in people3:
+            print(peeps.name)
+        print("============================")
+        questions.remove(blah)
     print(questions)
+"""
+
 def click(name):
     global urchar
     global choice
@@ -393,10 +402,13 @@ def click(name):
             for person in people:
                 if person.name != name:
                     (person.variable).destroy()
-                    person.variable = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                             state=DISABLED)
+                    person.variable = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y, image=person.imageX, state=DISABLED)
                     person.variable.grid(row=person.row, column=person.column)
-            # winner() #add winner animation later
+            win3 = messagebox.askyesno("YOUR WIN!", "YOU WIN! \n Would you like to play again?")
+            if win3 == 1:
+                reload()
+            else:
+                exit()
         else:
             (people[people2.index(name)].variable).destroy()
             people[people2.index(name)].variable = Button(mainFrame, bg="gray", borderwidth=0, padx=x, pady=y,
@@ -414,15 +426,13 @@ def hat():
         for person in people:
             if person.hat == False:
                 (person.variable).destroy()
-                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                         state=DISABLED)
+                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX, state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     elif choice1.hat == False:
         for person in people:
             if person.hat == True:
                 (person.variable).destroy()
-                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                         state=DISABLED)
+                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     machineguess()
 
@@ -435,15 +445,13 @@ def glasses():
         for person in people:
             if person.glasses == False:
                 (person.variable).destroy()
-                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                         state=DISABLED)
+                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     elif choice1.glasses == False:
         for person in people:
             if person.glasses == True:
                 (person.variable).destroy()
-                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                         state=DISABLED)
+                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     machineguess()
 
@@ -460,15 +468,13 @@ def sex():
         for person in people:
             if person.male == False:
                 (person.variable).destroy()
-                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                         state=DISABLED)
+                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     elif choice1.male == False:
         for person in people:
             if person.male == True:
                 (person.variable).destroy()
-                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                         state=DISABLED)
+                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX, state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     machineguess()
 
@@ -481,15 +487,13 @@ def bald():
         for person in people:
             if person.bald == False:
                 (person.variable).destroy()
-                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                         state=DISABLED)
+                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX, state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     elif choice1.bald == False:
         for person in people:
             if person.bald == True:
                 (person.variable).destroy()
-                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX,
-                                         state=DISABLED)
+                person.variable = Button(mainFrame, bg="yellow", borderwidth=0, padx=x, pady=y, image=person.imageX, state=DISABLED)
                 (person.variable).grid(row=person.row, column=person.column)
     machineguess()
 
@@ -676,6 +680,7 @@ def hair(color):
                     (person.variable).grid(row=person.row, column=person.column)
     machineguess()
 
+
 hat = Button(questionFrame, bg="tan", fg="brown", text="Do they have a hat?", command=hat)
 glasses = Button(questionFrame, bg="tan", fg="brown", text="Do they have glasses?", command=glasses)
 man = Button(questionFrame, bg="tan", fg="brown", text="Are they a man?    ", command=sex)
@@ -707,5 +712,7 @@ black.grid(row=3, column=0)
 red.grid(row=0, column=1)
 brown.grid(row=1, column=1)
 white.grid(row=2, column=1)
+
+
 
 root.mainloop()
